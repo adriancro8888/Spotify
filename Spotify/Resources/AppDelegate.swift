@@ -24,9 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navVC.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window.rootViewController = navVC
         }
-        print(AuthManager.shared.signInURL)
         window.makeKeyAndVisible()
         self.window = window
+        AuthManager.shared.refreshIfNeeded { success in
+            print(success)
+        }
         return true
     }
 
