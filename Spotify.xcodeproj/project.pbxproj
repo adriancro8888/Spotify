@@ -12,6 +12,7 @@
 		0A1C561826DAAC2F00A8752A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C561726DAAC2F00A8752A /* HomeViewController.swift */; };
 		0A1C561D26DAAC3000A8752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C561C26DAAC3000A8752A /* Assets.xcassets */; };
 		0A1C562026DAAC3000A8752A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C561E26DAAC3000A8752A /* LaunchScreen.storyboard */; };
+		0A54170C26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */; };
 		0A8D213C26DBD8E10023CC71 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */; };
 		0A8D213E26DBD9260023CC71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213D26DBD9260023CC71 /* SearchViewController.swift */; };
 		0A8D214026DC01270023CC71 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213F26DC01270023CC71 /* LibraryViewController.swift */; };
@@ -31,6 +32,7 @@
 		0A8D215F26DC5A730023CC71 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D215E26DC5A730023CC71 /* UserProfile.swift */; };
 		0A8D216126DC900B0023CC71 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D216026DC900B0023CC71 /* Extensions.swift */; };
 		0A8D216326DF1B750023CC71 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D216226DF1B750023CC71 /* AuthResponse.swift */; };
+		0A92EA0D26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A92EA0C26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift */; };
 		0AB5B1D526E899560038AC31 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5B1D426E899560038AC31 /* SettingsModels.swift */; };
 		0AB5B1D926E9D5F30038AC31 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB5B1D826E9D5F30038AC31 /* SDWebImage */; };
 		0AB5B1DB26E9D5F30038AC31 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB5B1DA26E9D5F30038AC31 /* SDWebImageMapKit */; };
@@ -52,6 +54,7 @@
 		0A1C561C26DAAC3000A8752A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A1C561F26DAAC3000A8752A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1C562126DAAC3000A8752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCellViewModel.swift; sourceTree = "<group>"; };
 		0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0A8D213D26DBD9260023CC71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0A8D213F26DC01270023CC71 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		0A8D215E26DC5A730023CC71 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0A8D216026DC900B0023CC71 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0A8D216226DF1B750023CC71 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		0A92EA0C26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCellViewModel.swift; sourceTree = "<group>"; };
 		0AB5B1D426E899560038AC31 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		0AB5B1DC26E9E6530038AC31 /* NewReleasesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesResponse.swift; sourceTree = "<group>"; };
 		0AB5B1DE26E9E7B40038AC31 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		0A8D213826DBD58A0023CC71 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0A92EA0C26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift */,
+				0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -303,7 +309,9 @@
 				0A8D213E26DBD9260023CC71 /* SearchViewController.swift in Sources */,
 				0A8D215926DC59F70023CC71 /* Playlist.swift in Sources */,
 				0A8D215326DC59370023CC71 /* AuthManager.swift in Sources */,
+				0A92EA0D26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift in Sources */,
 				0A8D215126DC58ED0023CC71 /* SearchResultsViewController.swift in Sources */,
+				0A54170C26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift in Sources */,
 				0A8D214626DC018E0023CC71 /* WelcomeViewController.swift in Sources */,
 				0A8D214A26DC01C10023CC71 /* ProfileViewController.swift in Sources */,
 				0A8D213C26DBD8E10023CC71 /* TabBarViewController.swift in Sources */,
@@ -399,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -472,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJCKM4F4RZ;
 				INFOPLIST_FILE = Spotify/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
