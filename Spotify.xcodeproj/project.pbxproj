@@ -17,6 +17,8 @@
 		0A54171026ED91250054DA56 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54170F26ED91250054DA56 /* AlbumViewController.swift */; };
 		0A54171226ED96F30054DA56 /* AlbumDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54171126ED96F30054DA56 /* AlbumDetailsResponse.swift */; };
 		0A54171426ED9C2D0054DA56 /* PlaylistDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54171326ED9C2D0054DA56 /* PlaylistDetailsResponse.swift */; };
+		0A54171626EDA8C20054DA56 /* PlaylistHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54171526EDA8C20054DA56 /* PlaylistHeaderCollectionReusableView.swift */; };
+		0A54171826EDAD810054DA56 /* PlaylistHeaderViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54171726EDAD810054DA56 /* PlaylistHeaderViewViewModel.swift */; };
 		0A8D213C26DBD8E10023CC71 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */; };
 		0A8D213E26DBD9260023CC71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213D26DBD9260023CC71 /* SearchViewController.swift */; };
 		0A8D214026DC01270023CC71 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213F26DC01270023CC71 /* LibraryViewController.swift */; };
@@ -63,6 +65,8 @@
 		0A54170F26ED91250054DA56 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		0A54171126ED96F30054DA56 /* AlbumDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsResponse.swift; sourceTree = "<group>"; };
 		0A54171326ED9C2D0054DA56 /* PlaylistDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsResponse.swift; sourceTree = "<group>"; };
+		0A54171526EDA8C20054DA56 /* PlaylistHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		0A54171726EDAD810054DA56 /* PlaylistHeaderViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderViewViewModel.swift; sourceTree = "<group>"; };
 		0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0A8D213D26DBD9260023CC71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0A8D213F26DC01270023CC71 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				0AB5B1E626EA93A70038AC31 /* Browse */,
 				0A1C561E26DAAC3000A8752A /* LaunchScreen.storyboard */,
+				0A54171526EDA8C20054DA56 /* PlaylistHeaderCollectionReusableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				0A92EA0C26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift */,
 				0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */,
 				0A54170D26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift */,
+				0A54171726EDAD810054DA56 /* PlaylistHeaderViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				0A54170E26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift in Sources */,
 				0A8D215126DC58ED0023CC71 /* SearchResultsViewController.swift in Sources */,
 				0A54171026ED91250054DA56 /* AlbumViewController.swift in Sources */,
+				0A54171826EDAD810054DA56 /* PlaylistHeaderViewViewModel.swift in Sources */,
 				0A54170C26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift in Sources */,
 				0A8D214626DC018E0023CC71 /* WelcomeViewController.swift in Sources */,
 				0A8D214A26DC01C10023CC71 /* ProfileViewController.swift in Sources */,
@@ -344,6 +351,7 @@
 				0A1C561426DAAC2F00A8752A /* AppDelegate.swift in Sources */,
 				0A8D215F26DC5A730023CC71 /* UserProfile.swift in Sources */,
 				0A8D216126DC900B0023CC71 /* Extensions.swift in Sources */,
+				0A54171626EDA8C20054DA56 /* PlaylistHeaderCollectionReusableView.swift in Sources */,
 				0A8D214026DC01270023CC71 /* LibraryViewController.swift in Sources */,
 				0A8D215D26DC5A400023CC71 /* Artist.swift in Sources */,
 				0AB5B1D526E899560038AC31 /* SettingsModels.swift in Sources */,
