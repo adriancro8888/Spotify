@@ -13,6 +13,7 @@
 		0A1C561D26DAAC3000A8752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C561C26DAAC3000A8752A /* Assets.xcassets */; };
 		0A1C562026DAAC3000A8752A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1C561E26DAAC3000A8752A /* LaunchScreen.storyboard */; };
 		0A54170C26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */; };
+		0A54170E26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A54170D26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift */; };
 		0A8D213C26DBD8E10023CC71 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */; };
 		0A8D213E26DBD9260023CC71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213D26DBD9260023CC71 /* SearchViewController.swift */; };
 		0A8D214026DC01270023CC71 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8D213F26DC01270023CC71 /* LibraryViewController.swift */; };
@@ -55,6 +56,7 @@
 		0A1C561F26DAAC3000A8752A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1C562126DAAC3000A8752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPlaylistCellViewModel.swift; sourceTree = "<group>"; };
+		0A54170D26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrackCellViewModel.swift; sourceTree = "<group>"; };
 		0A8D213B26DBD8E10023CC71 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0A8D213D26DBD9260023CC71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0A8D213F26DC01270023CC71 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				0A92EA0C26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift */,
 				0A54170B26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift */,
+				0A54170D26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				0A8D215926DC59F70023CC71 /* Playlist.swift in Sources */,
 				0A8D215326DC59370023CC71 /* AuthManager.swift in Sources */,
 				0A92EA0D26EBEBCC004DB6BB /* NewReleasesCellViewModel.swift in Sources */,
+				0A54170E26ED82B80054DA56 /* RecommendedTrackCellViewModel.swift in Sources */,
 				0A8D215126DC58ED0023CC71 /* SearchResultsViewController.swift in Sources */,
 				0A54170C26ED81DA0054DA56 /* FeaturedPlaylistCellViewModel.swift in Sources */,
 				0A8D214626DC018E0023CC71 /* WelcomeViewController.swift in Sources */,

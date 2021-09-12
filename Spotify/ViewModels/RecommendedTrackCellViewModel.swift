@@ -1,5 +1,5 @@
 //
-//  FeaturedPlaylistCellViewModel.swift
+//  RecommendedTrackCellViewModel.swift
 //  Spotify
 //
 //  Created by Amr Hossam on 12/09/2021.
@@ -7,10 +7,8 @@
 
 import Foundation
 
-
-struct FeaturedPlaylistCellViewModel {
+struct RecommendedTrackCellViewModel {
     let name: String
+    let artistName: String
     let artworkURL: URL?
-    let creatorName: String
-    
 }
