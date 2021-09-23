@@ -140,8 +140,9 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let track = tracks[indexPath.row]
-        PlaybackPresenter.startPlayback(from: self, track: track)
+        var track = tracks[indexPath.row]
+        track.album = self.album
+        PlaybackPresenter.shared.startPlayback(from: self, track: track)
         
     }
     
@@ -169,7 +170,12 @@ extension AlbumViewController: UICollectionViewDelegate, UICollectionViewDataSou
 
 extension AlbumViewController: PlaylistHeaderCollectionReusableViewDelegate {
     func PlaylistHeaderCollectionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollectionReusableView) {
-        PlaybackPresenter.startPlayback(from: self, tracks: tracks)
+        let tracksWithAlbum: [AudioTrack] = tracks.compactMap( {
+            var track = $0
+            track.album = album
+            return track
+        })
+        PlaybackPresenter.shared.startPlayback(from: self, tracks: tracksWithAlbum)
     }
     
     

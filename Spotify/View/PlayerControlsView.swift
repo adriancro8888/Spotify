@@ -12,10 +12,20 @@ protocol PlayerControlsViewDelegate: AnyObject {
     func playerControlsViewDidTapPlayPauseButton(_ playerControlsView: PlayerControlsView)
     func playerControlsViewDidTapForwardButton(_ playerControlsView: PlayerControlsView)
     func playerControlsViewDidTapBackwardButton(_ playerControlsView: PlayerControlsView)
+    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float)
 }
+
+struct PlayerControlsViewViewModel {
+    let title: String?
+    let subtitle: String?
+}
+
+
 
 final class PlayerControlsView: UIView {
     
+    
+    private var isPlaying = true
     
     weak var delegate: PlayerControlsViewDelegate?
     
@@ -31,7 +41,6 @@ final class PlayerControlsView: UIView {
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .label
-        label.text = "Tamally Maak"
         label.textAlignment = .center
         return label
     }()
@@ -40,7 +49,6 @@ final class PlayerControlsView: UIView {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 18, weight: .regular)
-        label.text = "Amr Diab"
         label.textAlignment = .center
         label.textColor = .secondaryLabel
         return label
@@ -80,7 +88,11 @@ final class PlayerControlsView: UIView {
         addSubview(nextButton)
         addSubview(playPauseButton)
         clipsToBounds = true
-        
+        volumeSlider.addTarget(
+            self,
+            action: #selector(didSlideSlider(_:)),
+            for: .valueChanged
+        )
         backButton.addTarget(self,
                              action: #selector(didTapBack),
                              for: .touchUpInside
@@ -98,6 +110,11 @@ final class PlayerControlsView: UIView {
         
     }
     
+    @objc private func didSlideSlider(_ slider: UISlider) {
+        let value = slider.value
+        delegate?.playerControlsView(self, didSlideSlider: value)
+    }
+    
     @objc private func didTapBack() {
         delegate?.playerControlsViewDidTapBackwardButton(self)
     }
@@ -107,7 +124,11 @@ final class PlayerControlsView: UIView {
     }
     
     @objc private func didTapPlayPause() {
-        delegate?.playerControlsViewDidTapPlayPauseButton(self) 
+        self.isPlaying = !isPlaying
+        delegate?.playerControlsViewDidTapPlayPauseButton(self)
+        let pause = UIImage(systemName: "pause.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        let play = UIImage(systemName: "play.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
+        playPauseButton.setImage(isPlaying ? pause : play, for: .normal)
     }
     
     required init?(coder: NSCoder) {
@@ -126,5 +147,11 @@ final class PlayerControlsView: UIView {
         playPauseButton.frame = CGRect(x: (width - buttonSize) / 2, y: volumeSlider.bottom + 30, width: buttonSize, height: buttonSize)
         backButton.frame = CGRect(x: playPauseButton.left - 80 - buttonSize, y: playPauseButton.top, width: buttonSize, height: buttonSize)
         nextButton.frame = CGRect(x: playPauseButton.right + 80, y: playPauseButton.top, width: buttonSize, height: buttonSize)
+    }
+    
+    
+    func configure(with viewModel: PlayerControlsViewViewModel) {
+        nameLabel.text = viewModel.title
+        subtitleLabel.text = viewModel.subtitle
     }
 }

@@ -187,7 +187,7 @@ extension SearchViewController: SearchResultsViewControllerDelegate {
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
         case .track(let track):
-            PlaybackPresenter.startPlayback(from: self, track: track)
+            PlaybackPresenter.shared.startPlayback(from: self, track: track)
         }
     }
     
