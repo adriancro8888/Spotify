@@ -87,6 +87,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        HapticsManager.shared.vibrateForSelection()
         collectionView.deselectItem(at: indexPath, animated: true)
         let vc = CategoryViewController(category: categories[indexPath.row])
         vc.modalPresentationStyle = .fullScreen
