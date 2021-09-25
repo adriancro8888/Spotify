@@ -60,6 +60,52 @@ class HomeViewController: UIViewController {
         configureCollectionView()
         view.addSubview(spinner)
         fetchData()
+        addLongTapGesture()
+        
+    }
+    
+    private func addLongTapGesture() {
+        let gesture = UILongPressGestureRecognizer(target: self,
+                                             action: #selector(didLongPress(_:)))
+        collectionView.addGestureRecognizer(gesture)
+        collectionView.isUserInteractionEnabled = true
+        
+        
+    }
+    
+    @objc private func didLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard gesture.state == .began else {
+            return
+        }
+        let touchPoint = gesture.location(in: collectionView)
+        guard let indexPath = collectionView.indexPathForItem(at: touchPoint),
+              indexPath.section == 2 else {
+            return
+        }
+        let model = tracks[indexPath.row]
+        let actionSheet = UIAlertController(
+            title: model.name,
+            message: "Would you like to add this to a playlist ?",
+            preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Add to Playlist", style: .default, handler: { [weak self] _ in
+            
+            DispatchQueue.main.async {
+                let vc = LibraryPlaylistsViewController()
+                
+                vc.selectionHandler = { playlist in
+                    APICaller.shared.addTrackToPlaylist(track: model,
+                                                        playlist: playlist) { success in
+                        print("Added to playlist status: \(success)")
+                    }
+                }
+                vc.title = "Select playlist"
+                self?.present(UINavigationController(rootViewController: vc), animated: true)
+            }
+
+        }))
+
+        present(actionSheet, animated: true)
         
     }
     
