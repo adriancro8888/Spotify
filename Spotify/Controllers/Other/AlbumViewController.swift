@@ -81,8 +81,35 @@ class AlbumViewController: UIViewController {
         collectionView.register(
             PlaylistHeaderCollectionReusableView.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: PlaylistHeaderCollectionReusableView.identifier)
+            withReuseIdentifier: PlaylistHeaderCollectionReusableView.identifier
+        )
+        fetchData()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .action,
+            target: self,
+            action: #selector(didTapAction)
+        )
+    }
+    
+    @objc private func didTapAction() {
+        let actionSheet = UIAlertController(title: album.name, message: "Action", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        actionSheet.addAction(UIAlertAction(title: "Save Album", style: .default, handler: { [weak self] _ in
+            guard let strongSelf = self else {
+                return
+            }
+            APICaller.shared.saveAlbum(album: strongSelf.album) { succes in
+                if succes {
+                    NotificationCenter.default.post(Notification(name: .albumSavedNotification, object: nil))
+                }
+            }
+        }))
+
         
+        present(actionSheet, animated: true)
+    }
+    
+    private func fetchData() {
         APICaller.shared.getAlbumDetails(for: album) {[weak self] result in
             DispatchQueue.main.async {
                 switch result {
@@ -102,7 +129,6 @@ class AlbumViewController: UIViewController {
             }
         }
     }
-    
     
     
     
